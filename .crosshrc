@@ -1,0 +1,23 @@
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+
+BASH_BIN=$(which bash)
+ZSH_BIN=$(which zsh)
+FZF_FILE=
+
+case "${SHELL}" in
+    "${BASH_BIN}")
+        FZF_FILE=~/.fzf.bash
+    ;;
+    "${ZSH_BIN}")
+        FZF_FILE=~/.fzf.zsh
+    ;;
+esac
+
+[ ! -z $FZF_FILE ] && [ -f $FZF_FILE ] && source $FZF_FILE
+
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
