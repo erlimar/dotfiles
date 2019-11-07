@@ -4,9 +4,9 @@ set -ou pipefail
 # Copyright (c) Erlimar Silva Campos. All rights reserved.
 # Licensed under the Apache License, Version 2.0. More license information in LICENSE.txt.
 
-cp $HOME/.crosshrc $PWD/.crosshrc
-cp $HOME/.bashrc $PWD/.bashrc
-cp $HOME/.zshrc $PWD/.zshrc
+cp $PWD/.crosshrc $HOME/.crosshrc
+cp $PWD/.bashrc $HOME/.bashrc
+cp $PWD/.zshrc $HOME/.zshrc
 
-echo "Dot files successfully imported!"
+echo "Dot files successfully exported!"
 
