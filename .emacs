@@ -26,7 +26,7 @@
 
 ;; Enable .NET Development
 (use-package csharp-mode :ensure t)
-(use-package cproj-mode :ensure t)
+(use-package csproj-mode :ensure t)
 
 ;; Enable Python Development
 (use-package python-mode :ensure t)
