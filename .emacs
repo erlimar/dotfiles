@@ -35,10 +35,8 @@
 (use-package lsp-mode
   :init
   (setq lsp-keymap-prefix "C-c l")
-  :hook (
-	 (csharp-mode . lsp)
-	 (python-mode . lsp)
-	 (lsp-mode . lsp-enable-which-key-integration))
+  :hook ((csharp-mode . lsp)
+	 (python-mode . lsp))
   :commands lsp
   :ensure t)
 
