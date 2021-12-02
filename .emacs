@@ -18,9 +18,8 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-;; Enable Dracula Theme
-(use-package dracula-theme :ensure t)
-(load-theme 'dracula t)
+;; Enable Magit
+(use-package magit :ensure t)
 
 ;; Enable NeoTree
 (use-package neotree :ensure t)
@@ -43,6 +42,10 @@
 	 (python-mode . lsp))
   :commands lsp
   :ensure t)
+
+;; Enable Dracula Theme
+(use-package dracula-theme :ensure t)
+(load-theme 'dracula t)
 
 ;; Custom KEYMAP
 (global-set-key [f8] 'neotree-toggle)
