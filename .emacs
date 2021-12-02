@@ -18,6 +18,10 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+;; Enable Dracula Theme
+(use-package dracula-theme :ensure t)
+(load-theme 'dracula t)
+
 ;; Enable NeoTree
 (use-package neotree :ensure t)
 
