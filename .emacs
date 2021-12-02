@@ -1,6 +1,7 @@
 ;; Basic UI preferences
 (setq inhibit-startup-message 1)
 (setq display-line-numbers 'absolute)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (set-language-environment "UTF-8")
 (global-display-line-numbers-mode t)
 (set-default 'truncate-lines t)
@@ -22,8 +23,10 @@
 ;; Enable Magit
 (use-package magit :ensure t)
 
-;; Enable NeoTree
+;; Enable NeoTree and All The Icons
+;; Install fonts (https://github.com/domtronn/all-the-icons.el/tree/master/fonts)
 (use-package neotree :ensure t)
+(use-package all-the-icons :ensure t)
 
 ;; Enable Company
 (use-package company :ensure t)
